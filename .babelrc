@@ -1,6 +1,35 @@
 {
-    "plugins": [
-        ["@babel/plugin-proposal-decorators", { "legacy": true }],
-        ["@babel/plugin-proposal-class-properties", { "loose": true }]
-    ]
+    "presets": [
+        ["next/babel", {
+          "preset-env": {
+            "modules": "commonjs",
+            "targets": {
+              "node": "current",
+              "browsers": [
+                "last 2 versions"
+              ]
+            }
+          }
+        }]
+    ],
+    "env": {
+        "development": {
+            "plugins": [
+                ["@babel/plugin-proposal-decorators", { "legacy": true }],
+                ["@babel/plugin-proposal-class-properties", { "loose": true }]
+            ]
+        },
+        "production": {
+            "plugins": [
+                ["@babel/plugin-proposal-decorators", { "legacy": true }],
+                ["@babel/plugin-proposal-class-properties", { "loose": true }]
+            ]
+        },
+        "jesttest": {
+            "plugins": [
+                ["@babel/plugin-proposal-decorators", { "legacy": true }],
+                ["@babel/plugin-proposal-class-properties", { "loose": true }]
+            ]
+        }
+    }
 }
