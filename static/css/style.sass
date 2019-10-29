@@ -1,0 +1,906 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700')
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700')
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500')
+@import 'swiper.min.css'
+
+$color-gray: #F0F1F2
+$color-softgray: #F3F3F3
+$color-darkgray: #707070
+$color-white: #FFF 
+$color-red: #FF5959
+$color-red2: #FF4D4D
+$color-black: #000
+$color-blue: #35357D
+$color-yellow: yellow
+$color-border: #EFEFEF
+$color-black: #262626
+$color-green: #5fce65
+$color-lightgreen: #64BD68
+$color-title: #383838 
+$color-lightgray: #606060
+$color-link: #3CADFF
+
+%yellow-link
+    font-size: 14px 
+    color: $color-yellow
+    margin-top: 5px
+    display: block
+
+html, body 
+    overflow-x: hidden
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-rendering: optimizeLegibility
+
+button, a 
+    cursor: pointer
+
+div
+    img, svg
+        cursor: pointer    
+#__nex
+    min-height: 100vh
+
+
+body
+    margin: 0
+    background: #F7F7F7
+    padding: 0 !important
+    font-family: 'Source Sans Pro', sans-serif !important
+
+    .App 
+        background: #F7F7F7
+        min-height: calc(100vh - 112px)
+        padding: 55px 15px 56px
+        -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75)
+        -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75)
+        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75)
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus 
+    border: unset
+    -webkit-text-fill-color: $color-white
+    -webkit-box-shadow: 0 0 0px 1000px rgba(255,255,255,0) inset
+    transition: background-color 5000s ease-in-out 0s
+
+p 
+    margin: 0
+
+.MuiButton-label 
+    text-transform: initial
+
+.mt0
+    margin-top: 0 !important
+.mb-5
+    margin-bottom: -5px !important
+.mb5
+    margin-bottom: 5px !important
+.mb10
+    margin-bottom: 10px !important
+.mb20
+    margin-bottom: 20px !important
+.mt10
+    margin-top: 10px !important
+.mt20
+    margin-top: 20px !important
+
+.MuiButton-root.Mui-disabled
+    background-color: rgba(255, 255, 255, 0.12)
+
+//header nav atas
+.headerNav
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    z-index: 2
+    border-bottom: solid 1px #E33D3D
+    .headerNav-bg
+        background: $color-red2
+    button
+        color: #FFF
+        margin: 0
+        .header-badge
+            span
+                background: $color-blue
+                font-size: 11px
+                height: 18px
+                width: 18px
+                min-width: unset
+                font-weight: 300
+                top: 7px
+                left: 3px
+
+//navigasi bawah
+.bottomBar
+    position: fixed
+    left: 0
+    bottom: 0
+    width: 100%
+    z-index: 2
+    span 
+        font-size: 11px !important
+    .MuiBottomNavigationAction-selected-186
+        color: $color-red
+
+//background merah homepage
+.background
+    position: absolute
+    z-index: 0
+    width: 100%
+    left: 0
+    top: 50px
+
+.section
+    position: relative
+    z-index: 1
+    margin-top: 20px
+    border-radius: 4px
+    //padding tiap box
+    h2
+        color: #707070
+        font-size: 14px
+        font-weight: 700
+        margin: 0 0 10px
+
+.section-product
+    h2 
+        margin: 0 0 15px
+    .product-base
+        padding: 15px
+    .product-category
+        padding: 5px 15px
+    .product-grid
+        margin: -15px
+        flex-wrap: wrap !important
+        .product-icon
+            height:45px !important
+            width:45px !important
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            justify-content: center
+        .product-name
+            color: $color-lightgray
+            font-size: 10px
+            margin-top: 5px
+        .product-item
+    .product-menu
+        h2 
+            margin: 0
+.section-credit
+    img 
+        cursor: unset
+    .kredit-top
+        color: $color-lightgray
+        font-size: 10px
+    .kredit-bot
+        color: $color-red
+        font-size: 15px
+        font-weight: 500
+        border: unset
+        background: $color-white
+        max-width: 110px
+    .credit-base
+        padding: 15px
+    .credit-button 
+        background: #FF5959
+        font-size: 10px
+        text-transform: capitalize 
+        min-width: 95px
+        box-shadow: 0px 1px 5px 0px rgba(236, 65, 65, 0.2), 0px 2px 2px 0px rgba(236, 65, 65, 0.2), 0px 3px 1px -2px rgba(236, 65, 65, 0.2)
+.section-slider
+    margin: 23px -15px 25px
+    h2 
+        margin-left: 15px
+    img 
+        width: 100%
+        height: auto
+    .swiper-box
+        padding: 0 15px
+        display: flex
+        justify-content: space-between
+        margin: 5px 0 0
+        p 
+            font-size: 10px
+            font-weight: 500
+            color: $color-red
+        .swiper-pagination, .article-pagination
+            position: relative
+            .swiper-pagination-bullet 
+                margin: 0 3px
+                border: solid 1px black
+                background: none
+            .swiper-pagination-bullet-active
+                background: $color-red
+                border: solid 1px $color-red
+.section-banner
+    .banner-item
+        margin-bottom: 10px
+        &__wrapper
+            display: flex
+            padding: 15px
+            align-items: center
+        &__left 
+            width: 48px
+            img 
+                width: 100%
+        &__right
+            margin-left: 15px
+        &__title
+            font-size: 12px 
+            color: $color-title
+            font-weight: 600
+        &__desc
+            font-size: 10px
+            color: #606060
+            font-weight: 500
+    .banner-all
+        display: flex 
+        justify-content: flex-end
+        p 
+            font-size: 10px
+            font-weight: 500
+            color: #FF5959
+.section-pros
+    .pros-base
+        padding: 30px 10px
+        border: solid 1px $color-softgray
+    .bordered
+        border-right: solid 1px $color-gray
+
+.section-article
+    margin: 15px -15px 0px
+    h2 
+        margin: 0 15px 10px
+    .image-article
+        max-height: 95px
+        overflow: hidden
+        img 
+            width: 100%
+            height: auto
+    .desc-article
+        background: $color-white
+        color: $color-darkgray
+        padding: 6px 10px
+        .swiper-slide
+            border-radius: 7px
+            overflow: hidden
+        .title
+            font-size: 12px
+            font-weight: 600
+            margin-bottom: 10px
+            color: #383838
+        .desc
+            font-size: 10px
+            font-weight: 500
+            display: -webkit-box
+            -webkit-line-clamp: 3
+            -webkit-box-orient: vertical
+            overflow: hidden
+            text-overflow: ellipsis
+            margin-bottom: 15px
+            color: #606060
+        button
+            border-radius: 30px
+            border-color: #E3E3E3
+            font-size: 10px
+            color: #707070
+            text-transform: capitalize
+            margin-bottom: 10px
+            font-weight: 600
+
+.section-signup, .section-signin
+    .MuiButton-contained.Mui-disabled 
+        background-color: rgba(255, 255, 255, 0.12) !important
+    color: $color-white
+    margin-top: 0
+    .signup-top
+        .signup-register
+            display: flex
+            flex-wrap: wrap
+            p 
+                position: absolute
+                font-size: 12px
+                font-family: roboto
+                right: 0
+                top: 5px
+    .signup-background
+        background-image: linear-gradient(to bottom right, #FF5959 55%, #FF7E53)
+        height: 100vh
+        width: 100vw
+        left: 0
+        position: fixed
+        z-index: 0
+        bottom: 0
+    form, .signup-top, div
+        z-index: 2
+        position: relative
+    h2 
+        color: inherit
+        font-family: 'Poppins', sans-serif
+        font-weight: 400
+        font-size: 22px
+        margin: 20px 0 0
+    h3
+        color: inherit
+        font-weight: 300
+        font-size: 12px
+        margin: 0px 0 10px
+        font-family: 'Roboto', sans-serif
+        line-height: 23px
+        padding-right: 20%
+    .signup-back
+        position: absolute
+        top: -50px
+        left: -5px
+        z-index: 2
+        width: 32px
+        height: 30px
+        padding: 0
+        color: $color-white
+        img 
+            width: 100%
+    .signup-toplink
+        color: white
+        text-decoration: none
+        position: absolute
+        font-family: 'Roboto', sans-serif
+        font-size: 12px
+        right: 0px
+        top: -40px
+        font-weight: 300
+        span 
+            color: yellow
+            border-bottom: solid 1px
+            margin-left: 10px
+            font-weight: 500
+    .signin-input
+        div 
+        p 
+            color: yellow 
+    .signup-text
+        display: flex
+        flex-wrap: wrap
+        margin-top: 20px
+        p 
+            width: 150px
+        div
+            flex: 1 1 auto
+        div::before
+            border-bottom: solid 1px 
+            position: absolute
+            width: 100%
+            left: 0
+            top: 12px
+            content: " "
+    .signup-bot
+        .signup-icon
+            margin-top: 20px
+            img 
+                margin: 0 15px
+            span
+                color: $color-white
+                display: block
+                font-family: roboto
+                font-size: 12px
+                font-weight: 300
+                margin-bottom: 20px
+        span 
+            font-family: roboto
+            font-weight: 300
+            font-size: 12px
+            position: relative
+            margin-top: 15px
+            display: block
+        .signup-line 
+            width: 100%
+            font-size: 12px
+            font-family: roboto
+            padding-top: 3px
+    .signup-bar
+        display: flex
+        background: rgba(255, 255, 255, 0.2)
+        color: #FFF
+        justify-content: space-between
+        padding: 20px 15px
+        margin: 20px -15px 0
+        font-family: roboto
+        font-size: 10px
+        border-top: 1px solid
+        font-weight: 300
+        p 
+            span 
+                font-weight: 500
+                color: yellow
+                margin-left: 5px
+    .signup-form
+        margin-top: 40px
+        .signup-formcheck
+            margin: 10px 0 30px
+            display: flex
+            p 
+                font-size: 12px
+            .signup-check
+                color: $color-white
+                padding: 1px 0px
+        div 
+            position: relative
+            div div
+                margin-bottom: 20px
+            input
+                padding-left: 30px
+                padding-bottom: 10px
+                color: $color-white
+                padding-top: 20px
+            img 
+                top: 15px
+                position: absolute
+            .signup-pass
+                top: 10px
+                img
+                    position: relative
+                    top: unset
+            p 
+                font-size: 12px
+                font-weight: 300
+                position: absolute
+                left: 30px
+            div div::before
+                border-bottom: 1px solid $color-white
+            div div p
+                bottom: -5px
+            button
+                color: $color-white
+        .signup-button
+            position: relative
+            margin-top: 0px
+            div
+                width: 100%
+                height: 100%
+                background: $color-softgray
+                position: absolute
+                z-index: 0
+                opacity: .3
+                border-radius: 7px
+            button
+                text-transform: capitalize
+                width: 100%
+                padding: 13px 0
+                box-shadow: unset
+                // background: $color-white
+                font-weight: 300
+                color: $color-red
+                margin-top: 10px
+        .signup-button2
+            position: relative
+            margin-top: 0px
+            div
+                width: 100%
+                height: 100%
+                background: $color-softgray
+                position: absolute
+                z-index: 0
+                opacity: .3
+                border-radius: 7px
+            button
+                text-transform: capitalize
+                width: 100%
+                padding: 13px 0
+                box-shadow: unset
+                font-weight: 300
+                margin-top: 10px
+                color: red
+                span 
+                    color: inherit
+            .MuiButton-disabled-337, .MuiButton-disabled-523, .MuiButton-disabled-709, .MuiButton-disabled-729, 
+            .MuiButton-disabled-895, .MuiButton-disabled-925, .MuiButton-disabled-1081
+                color: white !important    
+                  
+    .forgot-form
+        div 
+            p 
+                left: 0
+            input 
+                padding-left: 0
+    .signup-guest
+        border-top: solid 1px $color-white
+        margin-top: 10px
+        padding-top: 10px
+        span 
+            margin-left: 5px
+            color: yellow
+            display: inline-block
+    .verification-form
+        margin-top: 20px
+        position: relative
+        input 
+            padding-left: 30px
+            padding-bottom: 10px
+            color: white
+            padding-top: 20px
+            background: none
+            border: none
+            border-bottom: solid 1px white
+            position: relative
+        .verification-bottom
+            p 
+                position: relative
+                left: 0
+                font-size: 13px
+                font-weight: 300
+            span 
+                color: $color-yellow
+                font-size: 13px
+                font-weight: 300
+                display: inline-block
+                margin-bottom: 10px
+            .verification-link
+                border-bottom: solid 1px
+        .verification-otp
+            width: 80%
+            margin: 10px auto 0
+            div
+                width: 25%
+                justify-content: center
+                input 
+                    background: rgba(255, 255, 255, 0.3)
+                    border-radius: 5px
+                    border-bottom: unset
+                    padding: 0
+                    height: 50px
+                    width: 50px !important
+                    font-size: 18px
+.section-half
+    background-color: rgba(0, 0, 0, 0.7)
+    div
+        background: unset
+        overflow: hidden
+        max-height: 544px
+        div
+            overflow: unset
+    .half-curve
+        padding: 15px 15px 0
+    .signup-background
+        border-radius: 15px 15px 0 0
+ 
+.section-profile
+    margin-bottom: 0px
+    h2
+        margin: 20px 0 10px
+        color: $color-black
+    .credit-base
+        margin-bottom: 0px
+    ul 
+        li
+            color: $color-darkgray
+            display: flex
+            justify-content: space-between
+            position: relative
+            font-size: 14px
+            img 
+                margin-right: 10px
+            p 
+                flex-grow: 1
+        li::after
+            border-bottom: solid 1px $color-softgray
+            position: absolute
+            content: " "
+            width: 90%
+            bottom: 0
+            left: 5%
+    ul::after
+        border-bottom: solid 2px $color-white
+        position: absolute
+        content: " "
+        width: 90%
+        bottom: 8px
+        left: 5%
+    .profile-background
+        position: absolute
+        width: 100%
+        max-width: 480px
+        min-height: 200px
+        max-height: 200px
+        transform: translate(-50%, -50%)
+        left: 50%
+        right: 50%
+        top: 75px
+    .profile-base
+        padding: 50px 15px 15px
+        position: relative
+        margin-top: 40px
+        
+    .profile-name
+        color: $color-darkgray
+        margin: 0 0 5px
+        font-size: 26px
+    .profile-desc
+        color: $color-darkgray
+        font-weight: 100
+        font-size: 10px
+    .profile-image
+        transform: translate(-50%,-50%)
+        top: 0px
+        width: 110px
+        position: absolute
+    .profile-back
+        position: absolute
+        z-index: 2
+        color: #fff
+        top: 20px
+        cursor: pointer
+    .profile-version
+        margin-top: 40px
+        p   
+            color: $color-darkgray
+            font-size: 11px
+.section-forgot
+    .forgot-top
+        h2 
+            margin-bottom: 10px
+            font-size: 19px
+        p 
+            font-weight: 300
+            font-size: 12px
+            width: 80%
+    .forgot-bottom 
+        margin-top: 15px
+        p 
+            font-size: 14px
+            text-align: center
+        span
+            @extend %yellow-link
+
+.section-category
+    font-family: 'Source Sans Pro', sans-serif
+    margin: 0px -15px
+    ::-webkit-scrollbar 
+        width: 0px
+    .category-active
+        color: $color-white
+        font-weight: 700
+    .category-base
+        overflow: auto
+        white-space: nowrap
+        padding: 15px 10px 5px
+        div
+            border-radius: 20px
+            border: solid 1px
+            font-size: 10px
+            width: 95px
+            margin: 0 5px
+            text-align: center
+            padding: 10px 0
+            display: inline-block
+        div:nth-child(1) 
+            border-color: #69DE6F
+        div:nth-child(2)
+            border-color: #69B1DE
+        div:nth-child(3) 
+            border-color: #AC69DE
+        div:nth-child(4) 
+            border-color: #FF3444
+        .category-active:nth-child(1) 
+            background: #69DE6F
+        .category-active:nth-child(2) 
+            background: #69B1DE 
+        .category-active:nth-child(3) 
+            background: #AC69DE 
+        .category-active:nth-child(4) 
+            background: #FF3444 
+
+.section-snackbar
+    .snackbar-body
+        top: 0
+        bottom: unset
+        left: 0
+        right: 0
+        transform: unset
+        .MuiSnackbarContent-root
+            color: $color-white
+            background: linear-gradient(180deg, #64BD68, #7BC958)
+            justify-content: center
+            box-shadow: unset
+            border-radius: 0
+            padding: 9.5px 0
+            font-size: 14px
+            font-weight: 600
+            font-family: 'Source Sans Pro', sans-serif
+            width: 100%
+.section-loading
+    position: fixed
+    left: 0
+    top: 0
+    background: rgba(0,0,0,.75)
+    height: 100vh
+    width: 100vw
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    z-index: 10
+    svg 
+        max-width: 130px
+    div 
+         p 
+            font-size: 16px
+            color: $color-white
+            margin-top: 10px
+            font-family: 'Source Sans Pro', sans-serif
+.section-empty
+    height: 100vh
+    align-items: center
+    display: flex
+    justify-content: center
+    position: fixed
+    top: 50%
+    left: 50%
+    right: 50%
+    width: 100%
+    max-width: 480px
+    transform: translate(-50%, -50%)
+    .empty
+        &__animation
+            text-align: center
+            margin-top: -70px
+            width: 100%
+            svg
+                max-width: 290px
+        &__title
+            font-weight: 600
+            font-size: 16px
+            color: #606060
+            margin-bottom: 10px
+            margin-top: -39px
+            padding: 0px 10%
+        &__title-trans
+            font-weight: 600
+            font-size: 16px
+            color: #606060
+            margin-bottom: 10px
+            margin-top: -5px
+            padding: 0px 10%
+        &__desc
+            font-size: 14px
+            font-weight: 400
+            color: $color-darkgray
+            margin-bottom: 20px
+            padding: 0px 10%
+    button 
+        background: $color-red
+        color: $color-white
+        border: unset
+        margin: 0 auto
+        width: calc(100% - 40px)
+        padding: 15px 0
+        text-transform: capitalize
+        font-size: 14px
+        font-weight: 500
+    button:hover
+        background: rgb(239, 83, 80)
+.section-google-play-desc
+    margin-top: 16px
+    .paper
+        padding: 16px
+    .img
+        margin-bottom: 18px
+    .div
+        margin-bottom: 16px
+    .title
+        color: $color-darkgray
+        font-size: 14px
+        font-weight: 600
+        margin-bottom: 4px
+    .desc
+        color: $color-darkgray
+        font-size: 12px
+    u
+        color: $color-link
+    .tnc-text-header
+        margin-top: -8px
+    .expansion-summary
+        height: 56px
+        min-height: 56px
+        padding-left: 16px
+        padding-right: 16px
+    .expansion-details
+        padding-left: 16px
+        padding-right: 16px
+    ol
+        padding-top: 0px
+        padding-bottom: 0px
+        padding-left: 1em
+        padding-right: 1em
+        margin-block-start: 0px
+        margin-block-end: 0px
+    li
+        margin-bottom: 12px
+    .MuiButton-contained:hover
+        background-color: $color-red
+        color: $color-white
+    .back-button
+        background: $color-white
+        box-shadow: unset
+        border-radius: 0
+        text-transform: capitalize
+        padding: 13px 0
+        color: $color-red2
+        font-size: 12px
+        border: solid 1px
+.section-empty2
+    .empty
+        &__base
+            text-align: center
+            padding: 10px 10%
+        &__image
+            width: 40%
+            margin: auto
+            display: block
+            margin-top: 30px
+        &__title
+            font-weight: 600
+            font-size: 14px
+            color: $color-darkgray
+            margin-bottom: 10px
+            margin-top: -39px
+        &__title-trans
+            font-weight: 600
+            font-size: 14px
+            color: $color-darkgray
+            margin-bottom: 6px
+            margin-top: 28px
+        &__desc
+            font-size: 14px
+            font-weight: 400
+            color: $color-darkgray
+            margin-bottom: 12px
+    button 
+        background: $color-red
+        color: $color-white
+        border: unset
+        margin: 0 auto
+        width: 100%
+        padding: 15px 0
+        text-transform: capitalize
+        font-size: 14px
+        font-weight: 500
+    button:hover
+        background: $color-red
+        
+@media screen and (min-width: 480px)  
+    body 
+        max-width: 480px
+        margin: auto
+        background: #cecece
+        .background
+            display: none
+        .headerNav
+            .headerNav-bg
+                padding: 0
+                div 
+                    padding: 0
+                    margin: auto
+        .section-credit
+            margin-top: 40px
+            margin-top: 15px
+
+    .MuiToolbar-regular 
+        width: 480px // supaya konsisten widthnya di desktop
+        min-height: 54px !important
+        margin: auto
+    .MuiBottomNavigationAction-root 
+        padding: 5px 10px
+        max-width: 115px !important
+    .MuiBottomNavigationAction-root.Mui-selected 
+        /* padding-top: 5px */ // ---> ini awalnya klo di inspect element ada padding-top: 6px klo gak ngaruh take-out aja, klo ngaruh berarti jadiin 5px supaya konsisten
+
+
+@import 'transaction.sass'

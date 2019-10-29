@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_6376" data-name="Rectangle 6376" width="24" height="24" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_11330" data-name="Group 11330" transform="translate(-320 -11)">
+    <g id="Group_11169" data-name="Group 11169" transform="translate(320 11)">
+      <g id="Group_11168" data-name="Group 11168" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Path_18963" data-name="Path 18963" d="M126.481,234.408A12,12,0,0,0,108.719,250.5a4.529,4.529,0,0,1-1.89,2.186,1.12,1.12,0,0,0,.322,2.111,5.708,5.708,0,0,0,.849.065,7.76,7.76,0,0,0,4.313-1.4,12,12,0,0,0,14.169-19.054Zm-.96,16.008a10.648,10.648,0,0,1-12.912,1.654.676.676,0,0,0-.759.045,6.462,6.462,0,0,1-3.765,1.382,6.834,6.834,0,0,0,2.056-2.84.683.683,0,0,0-.116-.724,10.642,10.642,0,1,1,15.5.483Zm0,0" transform="translate(-106.001 -230.89)" fill="#fff"/>
+      </g>
+    </g>
+    <text id="_" data-name="?" transform="translate(328 29)" fill="#fff" font-size="14" font-family="ArialRoundedMTBold, Arial Rounded MT Bold"><tspan x="0" y="0">?</tspan></text>
+  </g>
+</svg>

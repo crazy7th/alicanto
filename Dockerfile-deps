@@ -1,0 +1,8 @@
+FROM node:lts-alpine
+LABEL maintainer="aldi@alterra.id"
+
+WORKDIR /app
+ADD package.json /app/package.json
+ADD package-lock.json /app/package-lock.json
+
+RUN npm install

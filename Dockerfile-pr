@@ -1,0 +1,11 @@
+ARG docker_tag=analyze
+FROM pelabuhan.alterra.dev/sancadeps/alicanto:${docker_tag}
+LABEL maintainer="aldi@alterra.id"
+
+WORKDIR /app
+COPY . .
+
+RUN npm run build
+
+EXPOSE 3000
+CMD ["npm", "run", "start"]

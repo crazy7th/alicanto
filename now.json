@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "name": "dev",
+    "builds": [
+      { 
+        "src": "next.config.js", 
+        "use": "@now/next", 
+        "config" : {"maxLambdaSize": "50mb"} 
+      }
+    ]
+  }
+  
